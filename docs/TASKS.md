@@ -6,9 +6,9 @@ Baseline: 26 October 2026. Ready means unblocked for starting, not implemented.
 | --- | --- | --- | --- | --- |
 | 01 | Scope baseline | Complete | Planning document and repository scaffold | Plan and task tracker available |
 | 02 | First topic content | Ready | Four lessons, eight examples, 20 practice and 10 revision questions | Maths reviewed; hints and explanations included |
-| 03 | UI design system | Ready | Typography, colours, cards, buttons and common states | Mobile and desktop design review |
-| 04 | Home page | Pending | Topic cards and continue section | Ready and coming-soon states work |
-| 05 | Lessons | Pending | Topic overview and lesson flow | Home → Topic → Lesson demo reviewed |
+| 03 | UI design system | In review (visual gate pending) | Typography, colours, cards, buttons and common states | Mobile and desktop design review |
+| 04 | Home page | In review (visual gate pending) | Topic cards and continue section | Ready and coming-soon states work |
+| 05 | Lessons | In review (sample content) | Topic overview and lesson flow | Home → Topic → Lesson demo reviewed |
 | 06 | Games | Pending | Sorting, matching and visual construction | Accurate feedback; tap and keyboard access |
 | 07 | Practice | Pending | Hints, scoring, mistakes, retry and local resume | Scoring and resume verified |
 | 08 | Print and OMR | Pending | Download resources and online answer grid | Versioned question/option order matches key |
@@ -32,3 +32,5 @@ Baseline: 26 October 2026. Ready means unblocked for starting, not implemented.
 | 2026-10-26 | 01 | Initial repository scaffold and planning files | File structure, Word document and Markdown conversion checked | No app implementation yet |
 
 Add branch/commit/PR and actual check results for each later task. Do not mark a task complete based only on a UI mockup.
+
+| 2026-10-26 | 03–05 first UI milestone | `feature/03-05-first-ui-milestone`; ADR-001; PR titled “Build first Home → Topic → Lesson UI milestone” | Syntax PASS; 4 Node checks PASS; static build PASS; built asset HTTP smoke PASS; Playwright BLOCKED by missing Chromium and invalid browser download | Real mobile/desktop visual and keyboard review; reviewed Task 02 integration; common async/edit/completion states in later milestones. No merge/deploy |
