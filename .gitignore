@@ -1,0 +1,23 @@
+# Secrets and machine-specific config
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+# Generated dependencies and build outputs
+node_modules/
+dist/
+build/
+target/
+.next/
+coverage/
+__pycache__/
+*.pyc
+.venv/
+# Local tooling and temporary data
+.DS_Store
+Thumbs.db
+*.log
+tmp/
+uploads/
