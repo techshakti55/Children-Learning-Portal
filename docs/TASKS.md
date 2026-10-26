@@ -31,6 +31,6 @@ Baseline: 26 October 2026. Ready means unblocked for starting, not implemented.
 | --- | --- | --- | --- | --- |
 | 2026-10-26 | 01 | Initial repository scaffold and planning files | File structure, Word document and Markdown conversion checked | No app implementation yet |
 
-| 2026-10-26 | 02 | `feature/02-number-types-content`; `content/class-4/maths/number-types/topic.json`, FORMAT.md and REVIEW.md | Local Python check passed: four lessons, eight examples, 30 MCQs; all option predicates and answer keys checked; definitions, worked examples and explanations author-reviewed | PR and Shakti review; draft only, no CI or publication claim |
+| 2026-10-26 | 02 | [PR #1](https://github.com/techshakti55/Children-Learning-Portal/pull/1); content commit `4b4ac2c`; `feature/02-number-types-content`; `content/class-4/maths/number-types/topic.json`, FORMAT.md and REVIEW.md | Local Python check passed: four lessons, eight examples, 30 MCQs; all option predicates and answer keys checked; definitions, worked examples and explanations author-reviewed | Shakti review of PR #1; draft only, no CI or publication claim |
 
 Add branch/commit/PR and actual check results for each later task. Do not mark a task complete based only on a UI mockup.
