@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "dev": "node scripts/serve.mjs",
-    "build": "node scripts/build.mjs",
-    "check": "node --check src/app.js && node --check src/components/ui.js && node --check src/features/number-types.sample.js",
-    "test": "node --test tests/*.test.mjs"
+    "dev": "node scripts/prepare-content.mjs && node scripts/serve.mjs",
+    "build": "node scripts/prepare-content.mjs && node scripts/build.mjs",
+    "check": "node scripts/prepare-content.mjs && node --check src/app.js && node --check src/components/ui.js && node --check src/features/number-types.adapter.js && node --check src/features/number-types.data.js && node --check src/features/topics.js",
+    "test": "node scripts/prepare-content.mjs && node --test tests/*.test.mjs"
   }
 }

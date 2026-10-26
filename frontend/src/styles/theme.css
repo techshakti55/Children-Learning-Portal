@@ -668,3 +668,16 @@ details p {
   transition:background .15s ease}
 }
 
+
+/* Canonical content: keep long paragraphs and complete worked steps readable. */
+.learning-goal h2 { font-size: 1.05rem; }
+.learning-goal h3 { font-size: .9rem; margin-top: 1rem; }
+.objectives, .prerequisites, .example-steps { padding-left: 1.4rem; }
+.objectives li, .prerequisites li, .example-steps li { margin: .5rem 0; }
+.prerequisites { font-size: .85rem; }
+.prerequisites a { display: inline-block; min-height: 44px; padding: .5rem 0; }
+.example-steps { line-height: 1.8; }
+.lesson-content, .topic-hero > div, .lesson-row > div { min-width: 0; }
+.lesson-content { overflow-wrap: anywhere; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 360px) { .large-number { display: none; } }

@@ -21,3 +21,6 @@ Thumbs.db
 *.log
 tmp/
 uploads/
+
+# Generated from the canonical reviewed JSON before check/test/build/dev
+frontend/src/features/number-types.data.js

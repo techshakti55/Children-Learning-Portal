@@ -35,7 +35,30 @@ or content API. LocalStorage stores only the last lesson ID, never identity or s
 storage denial is handled and the UI still works. Shared devices share this position,
 and clearing browser data removes it. No completion or practice scoring is implied.
 
-Task 02 was unavailable at inspection (only main branch, no open PR), so the UI uses
-labelled sample lessons in `frontend/src/features/number-types.sample.js`. Replace via
-an explicit adapter after reviewing Task 02's final contract; do not overwrite its work.
+Initial milestone used labelled sample lessons because Task 02 was unavailable at
+inspection. ADR-002 below supersedes that temporary source with canonical draft content.
 Backend, authentication, games, formal practice, resources and deployment remain pending.
+
+## ADR-002 — Canonical draft adapter (26 October 2026)
+
+Tasks 02 + 03–05, existing PR #2 branch. Integrate PR #1's exact reviewed content
+commit `b0eced932ac8f694a63985478ea63c558eeef6ae`, preserving the canonical files
+and checker bytes. Source publication/review metadata stays unchanged.
+
+`prepare-content.mjs` projects lesson fields from the canonical JSON to an ignored
+JS module before every build/dev/check/test. The browser adapter sorts by `order`,
+preserves source IDs and text, and resolves prerequisite IDs to readable titles.
+This avoids fetching the full draft question bank/keys into the lesson UI, avoids
+browser-specific JSON import attributes, and keeps a single editable source.
+Alternative runtime fetch adds loading/failure paths and static hosting path setup
+unneeded for this review milestone. No runtime dependency was added.
+
+Canonical routes use `nt-l1`–`nt-l4`; an explicit legacy alias map resolves all four
+previous slugs both in URLs and the unchanged localStorage key. Opening a lesson
+writes its canonical ID. Unknown/stale IDs fall back to a truthful first-visit state.
+Canonical source ID changes require a deliberate migration, never array-index identity.
+
+This is an explicitly labelled draft **review preview**, not a publication mechanism.
+Production published-content filtering belongs to the future backend/build workflow.
+No practice/game UI is added; author verification metadata and MCQs are excluded
+from the generated browser projection. See docs/ui/CONTENT_ADAPTER.md.

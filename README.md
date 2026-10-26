@@ -27,9 +27,10 @@ A separate learning website for Class 4 Maths: understand, explore, practise and
 A first Home → Topic → Lesson UI is implemented for review on
 `feature/03-05-first-ui-milestone`. It uses native JavaScript modules and CSS with
 no runtime dependencies. See [frontend run/check commands](frontend/README.md).
-Number Types has four labelled sample lessons; other topics are Coming soon.
-The working name is provisional. Final content and browser visual review remain
-pending; backend, games, accounts, admin and deployment are not implemented.
+Number Types previews the four canonical draft lessons from PR #1 exact reviewed
+commit `b0eced932ac8f694a63985478ea63c558eeef6ae`; other topics are Coming soon.
+The working name is provisional. Draft publication and real-browser visual review
+remain pending; backend, games, accounts, admin and deployment are not implemented.
 
 ## Working conventions
 
