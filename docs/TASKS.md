@@ -5,10 +5,10 @@ Baseline: 26 October 2026. Ready means unblocked for starting, not implemented.
 | ID | Task | Status | Deliverable | Completion check |
 | --- | --- | --- | --- | --- |
 | 01 | Scope baseline | Complete | Planning document and repository scaffold | Plan and task tracker available |
-| 02 | First topic content | Ready | Four lessons, eight examples, 20 practice and 10 revision questions | Maths reviewed; hints and explanations included |
-| 03 | UI design system | Ready | Typography, colours, cards, buttons and common states | Mobile and desktop design review |
-| 04 | Home page | Pending | Topic cards and continue section | Ready and coming-soon states work |
-| 05 | Lessons | Pending | Topic overview and lesson flow | Home → Topic → Lesson demo reviewed |
+| 02 | First topic content | In review (coordination checked; draft) | Four lessons, eight examples, 20 practice and 10 revision questions | Maths reviewed; hints and explanations included |
+| 03 | UI design system | In review (visual gate pending) | Typography, colours, cards, buttons and common states | Mobile and desktop design review |
+| 04 | Home page | In review (visual gate pending) | Topic cards and continue section | Ready and coming-soon states work |
+| 05 | Lessons | In review (canonical draft integrated) | Topic overview and lesson flow | Home → Topic → Lesson demo reviewed |
 | 06 | Games | Pending | Sorting, matching and visual construction | Accurate feedback; tap and keyboard access |
 | 07 | Practice | Pending | Hints, scoring, mistakes, retry and local resume | Scoring and resume verified |
 | 08 | Print and OMR | Pending | Download resources and online answer grid | Versioned question/option order matches key |
@@ -29,6 +29,25 @@ Baseline: 26 October 2026. Ready means unblocked for starting, not implemented.
 
 | Date | Task | Evidence | Checks | Remaining |
 | --- | --- | --- | --- | --- |
-| 2026-10-26 | 01 | Initial repository scaffold and planning files | File structure, Word document and Markdown conversion checked | No app implementation yet |
+| 2026-10-26 | 01 | Initial repository scaffold and planning files | File structure, Word document and Markdown conversion checked | No app implementation yet at baseline |
+| 2026-10-26 | 02 | [PR #1](https://github.com/techshakti55/Children-Learning-Portal/pull/1); content commit `4b4ac2c`; `feature/02-number-types-content`; `content/class-4/maths/number-types/topic.json`, FORMAT.md and REVIEW.md | Local Python check passed: four lessons, eight examples, 30 MCQs; all option predicates and answer keys checked; definitions, worked examples and explanations author-reviewed | Shakti review of PR #1; draft only, no CI or publication claim |
+| 2026-10-26 | 03–05 first UI milestone | `feature/03-05-first-ui-milestone`; ADR-001; PR titled “Build first Home → Topic → Lesson UI milestone” | Syntax PASS; 4 Node checks PASS; static build PASS; built asset HTTP smoke PASS; Playwright BLOCKED by missing Chromium and invalid browser download | Real mobile/desktop visual and keyboard review; reviewed Task 02 integration; common async/edit/completion states in later milestones. No merge/deploy |
+| 2026-10-26 | 02 + 03–05 integration | [PR #2](https://github.com/techshakti55/Children-Learning-Portal/pull/2), existing `feature/03-05-first-ui-milestone`; PR #1 exact reviewed commit `b0eced932ac8f694a63985478ea63c558eeef6ae` | Canonical files/checker byte match PASS; Python content check PASS; UI syntax PASS; 7 Node tests PASS; build PASS; 7 built asset HTTP checks PASS | Real screenshots/navigation/keyboard/overflow review BLOCKED by missing Chromium and invalid ZIP download; draft publication/owner sign-off not inferred; games and practice UI pending |
 
-Add branch/commit/PR and actual check results for each later task. Do not mark a task complete based only on a UI mockup.
+Main Coordination reports PR #1/#2 reviewed and the earlier content checker, UI
+syntax, four tests and build rerun PASS. The row above records this integration's
+own local evidence. The earlier “sample content unavailable” note is historical;
+canonical PR #1 content is now included. Task 02's bank exists, but Task 07 practice
+and Task 06 games are still not implemented. Content JSON remains draft with its
+original reviewStatus. No main merge, CI verification or deployment is claimed.
+
+## Static learning visuals follow-up
+
+PR #2, same feature branch: canonical-ID presentation map and shared static figure
+renderer added. All four lessons have labelled diagrams and plain-text alternatives;
+mobile panels/chips wrap, with meaning in text/outlines/counts as well as colour.
+Canonical content is unchanged. Content checker, syntax, 10 Node tests and build PASS;
+real Chromium launch still BLOCKED by the missing headless-shell executable. No
+screenshots/browser acceptance claimed. Windows manual review steps are in
+[WINDOWS_REVIEW.md](ui/WINDOWS_REVIEW.md). Tasks 03–05 remain In review; no games,
+MCQ practice, main merge or deployment.

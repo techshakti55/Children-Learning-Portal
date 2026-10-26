@@ -24,9 +24,13 @@ A separate learning website for Class 4 Maths: understand, explore, practise and
 
 ## Current state
 
-Planning and repository scaffold only. There is no runnable app, selected framework, database, deployment or student account system yet. No install/build commands are available until the stack is selected.
-
-First milestone: reviewed Number Types content and a Home → Topic → Lesson UI demonstration. Everyday content updates will use the admin editor in the completed application; that editor is not implemented yet.
+A first Home → Topic → Lesson UI is implemented for review on
+`feature/03-05-first-ui-milestone`. It uses native JavaScript modules and CSS with
+no runtime dependencies. See [frontend run/check commands](frontend/README.md).
+Number Types previews the four canonical draft lessons from PR #1 exact reviewed
+commit `b0eced932ac8f694a63985478ea63c558eeef6ae`; other topics are Coming soon.
+The working name is provisional. Draft publication and real-browser visual review
+remain pending; backend, games, accounts, admin and deployment are not implemented.
 
 ## Working conventions
 

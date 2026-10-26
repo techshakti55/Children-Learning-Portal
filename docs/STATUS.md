@@ -1,21 +1,84 @@
 # Current Status
 
-## Completed
+## Baseline complete
 
-- Agreed planning baseline recorded in Word and Markdown.
-- Repository modules and documentation folders scaffolded.
-- Twelve-task tracker and first topic brief added.
+Planning in Word and Markdown, repository scaffold and twelve-task tracker.
 
-## Next work
+## Task 02 — reviewed source integrated as draft preview
 
-Task 02: prepare and review the Number Types lessons and question bank.
-Task 03: choose the frontend stack, record the decision and design the reusable UI.
-First demonstration: Home → Topic → Lesson.
+[PR #1](https://github.com/techshakti55/Children-Learning-Portal/pull/1),
+`feature/02-number-types-content`: four lessons, eight worked examples, 20 practice
+and 10 revision MCQs in canonical JSON, FORMAT.md and readable REVIEW.md.
+The content checker and answer predicates pass. Lesson 4, its five practice questions
+and two revision questions are optional. Main Coordination reports reviewing PR #1.
 
-## Not implemented
+PR #2 integrates **exact reviewed commit `b0eced932ac8f694a63985478ea63c558eeef6ae`**.
+The four Number Types source/doc files and content checker match that commit byte
+for byte. `publicationStatus: draft` and the source reviewStatus are unchanged;
+coordination review is not silently converted into publication/owner sign-off.
 
-No runnable frontend, backend, games, admin panel, scoring, automated tests, CI pipeline, database, deployment or student accounts. Folder READMEs describe intended responsibilities only.
+## Tasks 03–05 — implementation in review
 
-## Decisions still open
+[PR #2](https://github.com/techshakti55/Children-Learning-Portal/pull/2), existing
+`feature/03-05-first-ui-milestone`. Native JS modules/CSS remain the selected stack.
 
-Brand/domain, frontend and backend frameworks, database, file storage, hosting and operating budget. A separate domain does not imply a separate server.
+- Responsive Home → Topic → Lesson, shared design tokens/cards/buttons/badges.
+- Canonical JSON adapter preserves IDs, lesson order, all objectives and explanation
+  blocks, both examples and every ordered step/answer. Prerequisite IDs render as
+  readable lesson titles/links; skill prerequisites remain plain text.
+- Build/dev/check/test generate a lesson-only module from the one canonical JSON.
+  The browser artifact excludes practice/revision MCQs, keys and mathCheck metadata.
+- Canonical `nt-l1`–`nt-l4` links, plus backwards-compatible old URLs and saved Continue
+  IDs. Storage key unchanged; opening either form saves the canonical ID.
+- Persistent “Review preview · Draft learning content · Not published” banner.
+  Core path ends at Lesson 3; Lesson 4 remains optional. Other topics Coming soon.
+- Only last-opened position is saved. Shared-device/clearing limitations disclosed.
+  No score, completion, game, login or backend is fabricated.
+
+Main Coordination reports the initial PR #2 review and four earlier tests/build PASS.
+Canonical integration supersedes the initial sample-content implementation.
+
+## Integration checks — local, 26 October 2026
+
+Node 24.22.1 / Python 3.12:
+
+- Five copied canonical content/checker files: exact reviewed bytes PASS.
+- Python checker: 4 lessons, 8 examples, 30 MCQs, keys/math predicates/optional split PASS.
+- UI syntax PASS; 7 Node tests PASS (adapter fidelity/order, generated projection,
+  legacy IDs, escaping, full rendered content, Continue and blocked storage).
+- Static build PASS; 7 built HTML/JS/CSS assets HTTP 200 and expected MIME types PASS.
+- Diff whitespace check PASS.
+
+Node rendering tests use a DOM boundary stub, not a real browser.
+Real Chromium execution was attempted again and is BLOCKED: headless-shell executable
+missing; `playwright install chromium --only-shell` downloads invalid/truncated ZIP
+archives (“End of central directory record signature not found”). Thus real mobile/
+desktop screenshots, navigation, keyboard and overflow checks were **not run** and
+no screenshots were produced. The updated optional script covers those checks at
+320/390/768/1280px and captures six screens at 390/1280px once a browser is available.
+Visual/zoom/screen-reader review still required before accepting Tasks 03–05.
+
+## Still pending
+
+Publication/owner sign-off, real-browser review, games, practice UI/scoring, mistake
+review, full local progress, print/OMR, backend, admin/authentication, CI, integration
+acceptance and deployment. Async retry/edit/completion states follow those features.
+Brand/domain, backend/database, file storage, hosting and operating budget remain open.
+Main is unchanged. No merge into main or deploy; CI and production unverified.
+
+## Static visuals follow-up — 26 October 2026
+
+PR #2 now adds `number-types.presentation.js`, keyed by canonical IDs, plus a shared
+`learning-visuals.js` renderer. Natural/whole nested boxes, even/odd pairs including
+zero, labelled factor rectangles, a labelled integer line and co-prime/twin-prime
+comparisons are static learning aids, not games. Each figure has a named heading,
+caption and expandable plain-text alternative. Layouts wrap; colour is supplementary.
+Canonical content files/checker and adapter remain unchanged.
+
+Content checker, UI syntax, 10 Node tests (including mathematical visual checks,
+counter counts and all previous compatibility tests) and build PASS. Real Chromium
+launch was retried: still BLOCKED by missing headless-shell-1234. Prior browser
+installation attempts returned invalid ZIPs. No real screenshots/navigation/keyboard/
+overflow verification claimed. Exact Windows PowerShell/manual Chrome or Edge review
+steps and screenshot instructions: [WINDOWS_REVIEW.md](ui/WINDOWS_REVIEW.md).
+Tasks remain In review; no games/practice, main merge or deploy.

@@ -1,0 +1,11 @@
+export const escapeHtml = (value) => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+export const badge = (text, kind = '') => `<span class="badge ${kind}">${escapeHtml(text)}</span>`;
+export const button = (text, href, secondary = false) => `<a class="button ${secondary ? 'secondary' : ''}" href="${escapeHtml(href)}">${escapeHtml(text)} <span aria-hidden="true">→</span></a>`;
+export const card = (body, classes = '') => `<article class="card ${classes}">${body}</article>`;
+export const breadcrumb = (current, lesson = false) => `<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span>${lesson ? '<a href="#/topics/number-types">Number Types</a><span aria-hidden="true">/</span>' : ''}<span aria-current="page">${escapeHtml(current)}</span></nav>`;
+export const meadowArt = () => `<svg class="meadow-art" viewBox="0 0 420 290" role="img" aria-label="A magnifying glass discovering the numbers 2, 3 and 5 among leaves">
+<circle cx="221" cy="139" r="116" fill="#dcebe0"/><path d="M32 265Q58 174 95 188Q119 212 84 269M330 271Q312 196 359 180Q389 218 350 272" fill="#83aa87"/><path d="M52 267L83 210M346 269L355 204" stroke="#285c4d" stroke-width="4"/>
+<rect x="88" y="72" width="91" height="107" rx="23" fill="#ffdc85" transform="rotate(-12 130 125)"/><text x="114" y="143" font-size="65" font-family="sans-serif" font-weight="700" fill="#574727">2</text>
+<rect x="256" y="69" width="85" height="101" rx="23" fill="#e1d9f5" transform="rotate(12 300 120)"/><text x="281" y="139" font-size="59" font-family="sans-serif" font-weight="700" fill="#594d7c">5</text>
+<path d="M238 192L286 246" stroke="#285c4d" stroke-width="24" stroke-linecap="round"/><circle cx="204" cy="156" r="62" fill="#fcfdf6" stroke="#285c4d" stroke-width="12"/><text x="184" y="177" font-size="64" font-family="sans-serif" font-weight="700" fill="#285c4d">3</text><path d="M165 142Q170 120 190 116" fill="none" stroke="#b5d6c6" stroke-width="6" stroke-linecap="round"/>
+<g fill="#ca8d38"><path d="M62 73l5-13 5 13 13 5-13 5-5 13-5-13-13-5z"/><circle cx="347" cy="52" r="5"/><circle cx="117" cy="240" r="5"/></g></svg>`;
