@@ -46,3 +46,14 @@ reduced motion, screen-reader headings/current state, old and canonical URLs,
 Continue migration, navigation and storage denial. Check that optional enrichment
 remains optional and drafts are clearly preview-only on every screen. Tasks 03–05
 remain In review until that real-browser/visual acceptance gate passes.
+
+## Static learning visuals
+
+Visual definitions are mapped separately by canonical lesson ID in
+`frontend/src/features/number-types.presentation.js`; reusable figure markup is in
+`frontend/src/components/learning-visuals.js`. Canonical JSON and adapter are unchanged.
+Each figure has labels, counts, outlines, a caption and “Read the picture in words”.
+Panels and chips wrap on mobile. No score, drag/drop, game or MCQ interaction exists.
+10 Node tests now pass, including visual maths/count checks; real Chromium remains
+blocked. Follow [the exact Windows review guide](WINDOWS_REVIEW.md) to collect real
+screenshots and check navigation, keyboard, overflow and zoom in installed Chrome/Edge.

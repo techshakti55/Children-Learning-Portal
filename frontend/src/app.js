@@ -1,5 +1,7 @@
 import source from './features/number-types.data.js';
 import { adaptTopic, resolveLessonId } from './features/number-types.adapter.js';
+import { lessonVisuals } from './features/number-types.presentation.js';
+import { renderLearningVisuals } from './components/learning-visuals.js';
 import { upcomingTopics } from './features/topics.js';
 import { escapeHtml as e, badge, button, card, breadcrumb, meadowArt } from './components/ui.js';
 const { lessons, topic } = adaptTopic(source);
@@ -39,6 +41,7 @@ function lessonPage(lesson) {
       <section class="idea"><h2>Let’s understand it</h2>
         ${lesson.explanationBlocks.map(block => `<p>${e(block)}</p>`).join('')}
       </section>
+      ${renderLearningVisuals(lessonVisuals[lesson.id])}
       <section><p class="eyebrow">THINK FIRST, THEN TAKE A LOOK</p><h2>Let’s see some examples</h2>
         <div class="examples">${lesson.examples.map((example, i) => card(`
           <span class="example-label">EXAMPLE ${i + 1}</span><h3>${e(example.prompt)}</h3>

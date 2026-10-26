@@ -37,8 +37,10 @@ test('Home → Topic → all canonical Lessons renders all paragraphs, objective
   for (const lesson of source.lessons) {
     app.go(`#/topics/number-types/lessons/${lesson.id}`);
     const html = app.main.innerHTML;
-    assert.equal((html.match(/<details /g) || []).length, 2);
+    assert.equal((html.match(/<details data-example-id=/g) || []).length, 2);
     assert.match(html, /Before you start/);
+    assert.match(html, /class="learning-visuals"/);
+    assert.match(html, /Read the picture in words/);
     assertOrdered(html, lesson.objectives);
     assertOrdered(html, lesson.explanationBlocks);
     for (const example of lesson.examples) {

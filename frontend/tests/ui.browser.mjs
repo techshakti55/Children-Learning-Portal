@@ -34,11 +34,11 @@ try {
     await heading(page, 'Number Detectives');
     await page.getByRole('link', { name: 'Counting World', exact: true }).click();
     await heading(page, 'Counting World');
-    await page.locator('summary').first().focus();
+    await page.locator('[data-example-id] summary').first().focus();
     await page.keyboard.press('Enter');
-    assert.equal(await page.locator('details').first().getAttribute('open'), '');
+    assert.equal(await page.locator('[data-example-id]').first().getAttribute('open'), '');
     await page.keyboard.press('Space');
-    assert.equal(await page.locator('details').first().getAttribute('open'), null);
+    assert.equal(await page.locator('[data-example-id]').first().getAttribute('open'), null);
     await page.reload();
     await heading(page, 'Counting World');
     await page.goBack();
@@ -54,6 +54,8 @@ try {
         const lesson = source.lessons.find(l => l.id === name);
         assert.deepEqual(await page.locator('.idea > p').allTextContents(), lesson.explanationBlocks);
         assert.deepEqual(await page.locator('.objectives > li').allTextContents(), lesson.objectives);
+        assert.ok(await page.locator('.learning-visual').count() >= 1);
+        for (const text of await page.locator('.visual-text summary').allTextContents()) assert.equal(text, 'Read the picture in words');
         for (const example of lesson.examples) {
           const details = page.locator(`[data-example-id="${example.id}"]`);
           await details.locator('summary').click();

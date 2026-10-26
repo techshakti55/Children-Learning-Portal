@@ -62,5 +62,13 @@ visual acceptance; also check zoom and screen-reader behaviour manually.
 
 Current result: browser execution BLOCKED by missing Chromium and invalid/truncated
 headless-shell download ZIP. No screenshots or real browser checks passed here.
-Seven Node tests and the static build pass; Node rendering tests use a minimal DOM
+Ten Node tests and the static build pass; Node rendering tests use a minimal DOM
 boundary stub. See docs/STATUS.md for evidence and the pending review gate.
+
+## Static visuals and Windows review
+
+`src/features/number-types.presentation.js` maps visuals to canonical IDs;
+`src/components/learning-visuals.js` renders named static figures with labels,
+captions, counts and text alternatives. This does not edit canonical content or
+add games/practice. For exact PowerShell preview, manual keyboard/navigation/
+overflow checks and screenshot steps, see [WINDOWS_REVIEW.md](../docs/ui/WINDOWS_REVIEW.md).

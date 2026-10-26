@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "node scripts/prepare-content.mjs && node scripts/serve.mjs",
     "build": "node scripts/prepare-content.mjs && node scripts/build.mjs",
-    "check": "node scripts/prepare-content.mjs && node --check src/app.js && node --check src/components/ui.js && node --check src/features/number-types.adapter.js && node --check src/features/number-types.data.js && node --check src/features/topics.js",
+    "check": "node scripts/prepare-content.mjs && node --check src/app.js && node --check src/components/ui.js && node --check src/features/number-types.adapter.js && node --check src/features/number-types.data.js && node --check src/features/topics.js && node --check src/features/number-types.presentation.js && node --check src/components/learning-visuals.js",
     "test": "node scripts/prepare-content.mjs && node --test tests/*.test.mjs"
   }
 }

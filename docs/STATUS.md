@@ -65,3 +65,20 @@ review, full local progress, print/OMR, backend, admin/authentication, CI, integ
 acceptance and deployment. Async retry/edit/completion states follow those features.
 Brand/domain, backend/database, file storage, hosting and operating budget remain open.
 Main is unchanged. No merge into main or deploy; CI and production unverified.
+
+## Static visuals follow-up — 26 October 2026
+
+PR #2 now adds `number-types.presentation.js`, keyed by canonical IDs, plus a shared
+`learning-visuals.js` renderer. Natural/whole nested boxes, even/odd pairs including
+zero, labelled factor rectangles, a labelled integer line and co-prime/twin-prime
+comparisons are static learning aids, not games. Each figure has a named heading,
+caption and expandable plain-text alternative. Layouts wrap; colour is supplementary.
+Canonical content files/checker and adapter remain unchanged.
+
+Content checker, UI syntax, 10 Node tests (including mathematical visual checks,
+counter counts and all previous compatibility tests) and build PASS. Real Chromium
+launch was retried: still BLOCKED by missing headless-shell-1234. Prior browser
+installation attempts returned invalid ZIPs. No real screenshots/navigation/keyboard/
+overflow verification claimed. Exact Windows PowerShell/manual Chrome or Edge review
+steps and screenshot instructions: [WINDOWS_REVIEW.md](ui/WINDOWS_REVIEW.md).
+Tasks remain In review; no games/practice, main merge or deploy.

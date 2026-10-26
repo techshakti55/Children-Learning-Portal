@@ -62,3 +62,12 @@ This is an explicitly labelled draft **review preview**, not a publication mecha
 Production published-content filtering belongs to the future backend/build workflow.
 No practice/game UI is added; author verification metadata and MCQs are excluded
 from the generated browser projection. See docs/ui/CONTENT_ADAPTER.md.
+
+## Static presentation follow-up (26 October 2026, PR #2)
+
+Map diagram definitions by canonical lesson ID in a separate presentation module;
+keep the canonical JSON and adapter unchanged. Use semantic HTML/CSS for exact
+counters, nesting, grids and ticks, not generated raster images. This keeps text
+readable/selectable and visuals dependency-free. Named figures, captions and plain
+text alternatives explain the same meaning without colour. Static diagrams do not
+introduce game state, practice or scoring. Browser visual acceptance is still pending.

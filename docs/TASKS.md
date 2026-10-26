@@ -40,3 +40,14 @@ own local evidence. The earlier “sample content unavailable” note is histori
 canonical PR #1 content is now included. Task 02's bank exists, but Task 07 practice
 and Task 06 games are still not implemented. Content JSON remains draft with its
 original reviewStatus. No main merge, CI verification or deployment is claimed.
+
+## Static learning visuals follow-up
+
+PR #2, same feature branch: canonical-ID presentation map and shared static figure
+renderer added. All four lessons have labelled diagrams and plain-text alternatives;
+mobile panels/chips wrap, with meaning in text/outlines/counts as well as colour.
+Canonical content is unchanged. Content checker, syntax, 10 Node tests and build PASS;
+real Chromium launch still BLOCKED by the missing headless-shell executable. No
+screenshots/browser acceptance claimed. Windows manual review steps are in
+[WINDOWS_REVIEW.md](ui/WINDOWS_REVIEW.md). Tasks 03–05 remain In review; no games,
+MCQ practice, main merge or deployment.
