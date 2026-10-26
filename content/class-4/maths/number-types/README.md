@@ -1,6 +1,10 @@
 # Number Detectives
 
-Task 02 content brief, not a completed lesson bank.
+Task 02 lesson bank prepared on `feature/02-number-types-content`; draft awaiting Shakti’s review.
+
+- [Structured source](topic.json)
+- [Readable lessons and answer bank](REVIEW.md)
+- [Format and validation](FORMAT.md)
 
 | Lesson | Concepts | Activity |
 | --- | --- | --- |

@@ -5,7 +5,7 @@ Baseline: 26 October 2026. Ready means unblocked for starting, not implemented.
 | ID | Task | Status | Deliverable | Completion check |
 | --- | --- | --- | --- | --- |
 | 01 | Scope baseline | Complete | Planning document and repository scaffold | Plan and task tracker available |
-| 02 | First topic content | Ready | Four lessons, eight examples, 20 practice and 10 revision questions | Maths reviewed; hints and explanations included |
+| 02 | First topic content | In review | Four lessons, eight examples, 20 practice and 10 revision questions | Maths reviewed; hints and explanations included |
 | 03 | UI design system | Ready | Typography, colours, cards, buttons and common states | Mobile and desktop design review |
 | 04 | Home page | Pending | Topic cards and continue section | Ready and coming-soon states work |
 | 05 | Lessons | Pending | Topic overview and lesson flow | Home → Topic → Lesson demo reviewed |
@@ -30,5 +30,7 @@ Baseline: 26 October 2026. Ready means unblocked for starting, not implemented.
 | Date | Task | Evidence | Checks | Remaining |
 | --- | --- | --- | --- | --- |
 | 2026-10-26 | 01 | Initial repository scaffold and planning files | File structure, Word document and Markdown conversion checked | No app implementation yet |
+
+| 2026-10-26 | 02 | [PR #1](https://github.com/techshakti55/Children-Learning-Portal/pull/1); content commit `4b4ac2c`; `feature/02-number-types-content`; `content/class-4/maths/number-types/topic.json`, FORMAT.md and REVIEW.md | Local Python check passed: four lessons, eight examples, 30 MCQs; all option predicates and answer keys checked; definitions, worked examples and explanations author-reviewed | Shakti review of PR #1; draft only, no CI or publication claim |
 
 Add branch/commit/PR and actual check results for each later task. Do not mark a task complete based only on a UI mockup.
